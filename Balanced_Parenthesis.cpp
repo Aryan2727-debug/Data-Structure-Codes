@@ -1,15 +1,15 @@
 #include <iostream>
 #include <bits/stdc++.h>
-#include <string>
 #include <stack>
+#include <string>
 using namespace std;
 bool checkParenthesis(string str){
-    stack<char> s;
+    stack <char> s;
     for(int i=0;i<str.length();i++){
         if(s.empty()){
             s.push(str[i]);
         }
-        else if(( s.top()=='(' && str[i]==')' ) || ( s.top()=='{' && str[i]=='}' ) || ( s.top()=='[' && str[i]==']' )){
+        else if((s.top() == '(' && str[i] == ')') || (s.top() == '[' && str[i] == ']') || (s.top() == '{' && str[i] == '}')){
             s.pop();
         }
         else{
